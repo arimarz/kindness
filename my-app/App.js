@@ -1,10 +1,28 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button, Alert } from 'react-native';
+import React, {useState} from 'react';
 
 export default function App() {
+  
+  const samplePrompts = [
+    "Write down three things you're grateful for today.",
+    "Teach someone a new skill you're good at.",
+    "Pick up litter in your local park.",
+    "Share a positive meme or uplifting news on social media."
+  ]
+
+  const [prompt, setPrompt] = useState(samplePrompts[0])
+
+  function onButtonPress() {
+    let randomInt = Math.floor(Math.random() * 4)
+    setPrompt(samplePrompts[randomInt])
+  }
+
   return (
     <View style={styles.container}>
-      <Text>"Be kind whenever possible. It is always possible" -Dalai Lama</Text>
+      <Text>Kindness Carousel</Text>
+      <Text>{prompt}</Text>
+      <Button title="New Prompt" onPress={onButtonPress}/>
       <StatusBar style="auto" />
     </View>
   );
