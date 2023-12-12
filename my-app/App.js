@@ -1,6 +1,12 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import { StatusBar, StyleSheet, Text, View, Button, Pressable, Picker } from 'react-native';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+const Stack = createNativeStackNavigator();
+
 import acts from './acts.json';
+import SplashScreen from './components/SplashScreen';
 
 export default function App() {
   const [randomAct, setRandomAct] = useState('');
@@ -17,10 +23,10 @@ export default function App() {
     setRandomAct(randomAct);
   };
 
-  return (
+  const main = () => {
+    return (
     <View style={styles.container}>
       <Text style={styles.title}>Kindness Carousel</Text>
-      <Text>"Be kind whenever possible. It is always possible" -Dalai Lama</Text>
       <View style={styles.promptBack}>
         {randomAct ? <Text style={styles.promptText}>{randomAct}</Text> : null}
       </View>
@@ -39,6 +45,16 @@ export default function App() {
       </Picker>
       <StatusBar style="auto" />
     </View>
+    )
+  }
+
+    return (
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name='SplashScreen' component={SplashScreen}/>
+          <Stack.Screen name='Main'>{main}</Stack.Screen>
+        </Stack.Navigator>
+      </NavigationContainer>
   );
 }
 
