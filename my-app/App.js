@@ -1,19 +1,22 @@
-import React, {useState} from 'react';
-import { StatusBar } from 'expo-status-bar';
-
-import { StyleSheet, Text, View, Button, Pressable } from 'react-native';
+import React, { useState } from 'react';
+import { StatusBar, StyleSheet, Text, View, Button, Pressable, Picker } from 'react-native';
 import acts from './acts.json';
 
 export default function App() {
   const [randomAct, setRandomAct] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
   const getRandomAct = () => {
-    const categories = Object.values(acts); // Fetching array of all act categories
-    const randomCategory = categories[Math.floor(Math.random() * categories.length)]; // Select a random category
-    const randomAct = randomCategory[Math.floor(Math.random() * randomCategory.length)]; // Select a random act from that category
-    setRandomAct(randomAct); // Set the random act to state
+    let categories = Object.values(acts);
+    if (selectedCategory !== 'all') {
+      categories = [acts[selectedCategory]];
+    }
+
+    const randomCategory = categories[Math.floor(Math.random() * categories.length)];
+    const randomAct = randomCategory[Math.floor(Math.random() * randomCategory.length)];
+    setRandomAct(randomAct);
   };
-  
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Kindness Carousel</Text>
@@ -24,6 +27,16 @@ export default function App() {
       <Pressable style={styles.promptButton} onPress={getRandomAct}>
         <Text style={styles.buttonText}>Be Kind Today</Text>
       </Pressable>
+      <Picker
+        selectedValue={selectedCategory}
+        style={{ height: 50, width: 150 }}
+        onValueChange={(itemValue, itemIndex) => setSelectedCategory(itemValue)}
+      >
+        <Picker.Item label="All Categories" value="all" />
+        {Object.keys(acts).map((category) => (
+          <Picker.Item key={category} label={category.split('_').join(' ')} value={category} />
+        ))}
+      </Picker>
       <StatusBar style="auto" />
     </View>
   );
