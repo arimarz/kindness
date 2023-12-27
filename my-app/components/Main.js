@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { StatusBar, StyleSheet, Text, View, Pressable, Picker } from 'react-native';
-import acts from '../acts.json'
+import acts from '../acts.json';
 
 function Main(){
     const [randomAct, setRandomAct] = useState('');
