@@ -10,9 +10,13 @@ import Main from './components/Main';
 export default function App() {
     return (
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name='SplashScreen' component={SplashScreen}/>
-          <Stack.Screen name='Main' component={Main}/>
+        <Stack.Navigator
+        screenOptions={{
+          headerShown: false
+        }}  
+        >
+          <Stack.Screen name='SplashScreen' component={SplashScreen} options={{title: 'Welcome - Kindness Carousel'}}/>
+          <Stack.Screen name='Main' component={Main} options={{title: 'Choose Category and Prompt - Kindness Carousel'}}/>
         </Stack.Navigator>
       </NavigationContainer>
   );
