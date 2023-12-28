@@ -1,50 +1,50 @@
 {
-    "verbal_acts": [
+    "Verbal_Acts": [
         "Compliment a stranger on something you genuinely like about them.",
         "Leave a positive comment on someone's blog or social media post.",
         "Praise a colleague or classmate's work to their supervisor or teacher."
     ],
-    "physical_acts": [
+    "Physical_Acts": [
         "Hold the door open for someone.",
         "Help a neighbor with their groceries.",
         "Offer your seat to someone, be it on public transport or at a waiting room."
     ],
-    "digital_acts": [
+    "Digital_Acts": [
         "Send an e-card to a friend just to brighten their day.",
         "Share a positive meme or uplifting news on social media.",
         "Leave a positive review for a small business online."
     ],
-    "monetary_acts": [
+    "Monetary_Acts": [
         "Donate a small amount to a charity of your choice.",
         "Pay for the order of the person behind you in a drive-thru.",
         "Contribute to a crowdfunding campaign for a good cause."
     ],
-    "time_acts": [
+    "Time_Acts": [
         "Spend an hour volunteering at a local shelter.",
         "Listen to someone who needs to talk, without offering advice unless asked.",
         "Offer to babysit for friends or family so they can enjoy some time off."
     ],
-    "educational_acts": [
+    "Educational_Acts": [
         "Teach someone a new skill you're good at.",
         "Donate old books to a library or school.",
         "Recommend a helpful online course or tutorial to someone."
     ],
-    "environmental_acts": [
+    "Environmental_Acts": [
         "Plant a tree or some flowers in a communal area.",
         "Pick up litter in your local park.",
         "Offer to help a neighbor set up a composting system."
     ],
-    "workplace_acts": [
+    "Workplace_Acts": [
         "Bring in snacks or coffee for your colleagues.",
         "Offer to help a coworker with a task they're struggling with.",
         "Organize a short relaxation or fun session during a work break."
     ],
-    "neighborly_acts": [
+    "Neighborly_Acts": [
         "Organize a neighborhood clean-up day.",
         "Start a local book or toy exchange.",
         "Offer to mow an elderly neighbor's lawn."
     ],
-    "self_acts": [
+    "Self_Acts": [
         "Take a day off for self-care.",
         "Write down three things you're grateful for today.",
         "Spend an evening doing something you love but haven't had time for."
