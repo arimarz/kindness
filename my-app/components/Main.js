@@ -25,19 +25,21 @@ function Main(){
             <View style={styles.promptBack}>
                 {randomAct ? <Text style={styles.promptText}>{randomAct}</Text> : null}
             </View>
-            <Pressable style={styles.promptButton} onPress={getRandomAct}>
-                <Text style={styles.buttonText}>Be Kind Today</Text>
-            </Pressable>
-            <Picker
-                selectedValue={selectedCategory}
-                style={{ height: 50, width: 150 }}
-                onValueChange={(itemValue, itemIndex) => setSelectedCategory(itemValue)}
-            >
-                <Picker.Item label="All Categories" value="all" />
-                {Object.keys(acts).map((category) => (
-                <Picker.Item key={category} label={category.split('_').join(' ')} value={category} />
-                ))}
-            </Picker>
+            <View>
+              <Pressable style={styles.promptButton} onPress={getRandomAct}>
+                  <Text style={styles.buttonText}>Be Kind Today</Text>
+              </Pressable>
+              <Picker
+                  selectedValue={selectedCategory}
+                  style={styles.picker}
+                  onValueChange={(itemValue, itemIndex) => setSelectedCategory(itemValue)}
+              >
+                  <Picker.Item label="All Categories" value="all" />
+                  {Object.keys(acts).map((category) => (
+                  <Picker.Item key={category} label={category.split('_').join(' ')} value={category} />
+                  ))}
+              </Picker>
+            </View>
             <StatusBar style="auto" />
         </View>
     )
@@ -61,7 +63,9 @@ function Main(){
         promptButton: {
           backgroundColor: '#62BEC1',
           padding: 20,
-          borderRadius: 10
+          borderRadius: 10,
+          alignItems: 'center',
+          marginBottom: 10
         },
       
         buttonText: {
@@ -82,6 +86,10 @@ function Main(){
           color: '#312F2F', 
           textAlign: 'center', 
           fontSize: 20
+        }, 
+        picker: {
+          borderRadius: 10,
+          padding: 10,
         }
       });
 
