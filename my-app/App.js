@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import 'react-native-gesture-handler';
 import SplashScreen from './components/SplashScreen';
 import Main from './components/Main';
 
