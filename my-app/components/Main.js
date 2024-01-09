@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { StatusBar, StyleSheet, Text, View, Pressable, Picker } from 'react-native';
+import { StatusBar, StyleSheet, Text, View, Pressable} from 'react-native';
+import { Picker } from '@react-native-picker/picker'
 import { useNavigation } from '@react-navigation/native';
 import acts from '../acts.json';
 
@@ -30,22 +31,21 @@ function Main() {
             <View style={styles.promptBack}>
                 {randomAct ? <Text style={styles.promptText}>{randomAct}</Text> : null}
             </View>
-
-            <Pressable style={styles.promptButton} onPress={getRandomAct}>
-                <Text style={styles.buttonText}>Be Kind Today</Text>
-            </Pressable>
-
-            <Picker
-                selectedValue={selectedCategory}
-                style={styles.picker}
-                onValueChange={(itemValue, itemIndex) => setSelectedCategory(itemValue)}
-            >
-                <Picker.Item label="All Categories" value="all" />
-                {Object.keys(acts).map((category) => (
-                    <Picker.Item key={category} label={category.split('_').join(' ')} value={category} />
-                ))}
-            </Picker>
-
+            <View>
+              <Pressable style={styles.promptButton} onPress={getRandomAct}>
+                  <Text style={styles.buttonText}>Be Kind Today</Text>
+              </Pressable>
+              <Picker
+                  selectedValue={selectedCategory}
+                  style={styles.picker}
+                  onValueChange={(itemValue, itemIndex) => setSelectedCategory(itemValue)}
+              >
+                  <Picker.Item label="All Categories" value="all" />
+                  {Object.keys(acts).map((category) => (
+                  <Picker.Item key={category} label={category.split('_').join(' ')} value={category} />
+                  ))}
+              </Picker>
+            </View>
             <StatusBar style="auto" />
         </View>
     );
@@ -97,9 +97,9 @@ const styles = StyleSheet.create({
         color: '#312F2F',
     },
     picker: {
-        height: 50,
-        width: 150
-    }
+        borderRadius: 10,
+        padding: 10,
+      }
 });
 
 export default Main;
