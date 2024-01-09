@@ -10,9 +10,9 @@ const Drawer = createDrawerNavigator();
 export default function App() {
     return (
         <NavigationContainer>
-            <Drawer.Navigator initialRouteName="Main">
-                <Drawer.Screen name="SplashScreen" component={SplashScreen} />
-                <Drawer.Screen name="Main" component={Main} />
+            <Drawer.Navigator initialRouteName="Main" screenOptions={{headerShown: false}}>
+                <Drawer.Screen name="SplashScreen" component={SplashScreen} options={{title: 'Welcome - Kindness Carousel'}}/>
+                <Drawer.Screen name="Main" component={Main} options={{title: 'Choose Category and Prompt - Kindness Carousel'}}/>
             </Drawer.Navigator>
         </NavigationContainer>
     );
