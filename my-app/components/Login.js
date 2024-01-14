@@ -1,3 +1,7 @@
+// TODO:
+//  - Refine styling (spacing, label text, centering)
+//  - Add onSubmit logic.
+
 import { StyleSheet, Text, View, TextInput, Pressable } from 'react-native';
 import { useFormik } from 'formik';
 import { useNavigation } from '@react-navigation/native';
