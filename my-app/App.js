@@ -4,6 +4,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'; // Import Icon component
 import SplashScreen from './components/SplashScreen';
 import Main from './components/Main';
+import CalendarView from './components/CalendarView';
 import Badges from './components/Badges';
 import People from './components/People';
 
