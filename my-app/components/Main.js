@@ -33,19 +33,19 @@ function Main() {
                 {randomAct ? <Text style={styles.promptText}>{randomAct}</Text> : null}
             </View>
             <View>
-              <Pressable style={styles.promptButton} onPress={getRandomAct}>
-                  <Text style={styles.buttonText}>Be Kind Today</Text>
-              </Pressable>
-              <Picker
-                  selectedValue={selectedCategory}
-                  style={styles.picker}
-                  onValueChange={(itemValue, itemIndex) => setSelectedCategory(itemValue)}
-              >
-                  <Picker.Item label="All Categories" value="all" />
-                  {Object.keys(acts).map((category) => (
-                  <Picker.Item key={category} label={category.split('_').join(' ')} value={category} />
-                  ))}
-              </Picker>
+                <Pressable style={styles.promptButton} onPress={getRandomAct}>
+                    <Text style={styles.buttonText}>Be Kind Today</Text>
+                </Pressable>
+                <Picker
+                    selectedValue={selectedCategory}
+                    style={styles.picker}
+                    onValueChange={(itemValue, itemIndex) => setSelectedCategory(itemValue)}
+                >
+                    <Picker.Item label="All Categories" value="all" />
+                    {Object.keys(acts).map((category) => (
+                    <Picker.Item key={category} label={category.split('_').join(' ')} value={category} />
+                    ))}
+                </Picker>
             </View>
             <StatusBar style="auto" />
         </View>
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     picker: {
         borderRadius: 10,
         padding: 10,
-      }
+        }
 });
 
 export default Main;
