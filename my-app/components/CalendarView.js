@@ -1,21 +1,24 @@
 // TODO:
-// - Styling
+// - Styling and customizations
 // - Logic for Tracking Active Days/Marking Dates 
 // - Logic for Displaying Acts for a Given Day
 
 import { StyleSheet, View, Text, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Calendar } from 'react-native-calendars';
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 function CalendarView() {
     const navigation = useNavigation();
+    const leftArrow = <Icon name="keyboard-arrow-left"/>
+    const rightArrow = <Icon name="keyboard-arrow-right"/>
 
     return (
         <View style={styles.container}>
             <Pressable style={styles.menuButton} onPress={() => navigation.toggleDrawer()}>
                 <Text style={styles.menuIcon}>☰</Text>
             </Pressable>
-            <Calendar/>
+            <Calendar />
         </View>
     )
 }
