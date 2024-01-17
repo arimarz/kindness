@@ -4,7 +4,7 @@ import data from '../quotes.json'
 
 
 const SplashScreen = ({ navigation }) => {
-  const [quote, setQuote] = useState({quote: "Hi", author: "Me"})
+  const [quote, setQuote] = useState({quote: "", author: ""})
   useEffect(() => {
     const randomQuote = data.quotes[Math.floor(Math.random() * data.quotes.length)]
     setQuote(randomQuote)
