@@ -10,15 +10,19 @@ import Icon from 'react-native-vector-icons/MaterialIcons'
 
 function CalendarView() {
     const navigation = useNavigation();
-    const leftArrow = <Icon name="keyboard-arrow-left"/>
-    const rightArrow = <Icon name="keyboard-arrow-right"/>
+    const leftArrow = <Icon name="keyboard-arrow-left" size={30} color='#62BEC1'/>
+    const rightArrow = <Icon name="keyboard-arrow-right" size={30} color='#62BEC1'/>
 
     return (
         <View style={styles.container}>
             <Pressable style={styles.menuButton} onPress={() => navigation.toggleDrawer()}>
                 <Text style={styles.menuIcon}>☰</Text>
             </Pressable>
-            <Calendar />
+            <Calendar renderArrow={(direction) => {
+                                    if (direction == "left") return leftArrow;
+                                    if (direction == "right") return rightArrow  
+                                    }}
+            />
         </View>
     )
 }
