@@ -53,6 +53,16 @@ export default function App() {
                         )
                     }} 
                 />
+                <Drawer.Screen 
+                    name="Calendar" 
+                    component={CalendarView} 
+                    options={{ 
+                        title: 'Calendar',
+                        drawerIcon: ({focused, size}) => (
+                            <Icon name="calendar-multiselect" size={size} color={focused ? '#7cc' : '#ccc'} />
+                        )
+                    }} 
+                />
             </Drawer.Navigator>
         </NavigationContainer>
     );
