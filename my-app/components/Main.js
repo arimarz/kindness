@@ -23,10 +23,6 @@ function Main() {
 
     return (
         <View style={styles.container}>
-            <Pressable style={styles.menuButton} onPress={() => navigation.toggleDrawer()}>
-                <Text style={styles.menuIcon}>☰</Text>
-            </Pressable>
-
             <Text style={styles.title}>Kindness Carousel</Text>
 
             <View style={styles.promptBack}>
@@ -86,16 +82,6 @@ const styles = StyleSheet.create({
         color: '#312F2F',
         textAlign: 'center',
         fontSize: 20
-    },
-    menuButton: {
-        position: 'absolute',
-        top: 40,
-        left: 20,
-        zIndex: 1,
-    },
-    menuIcon: {
-        fontSize: 30,
-        color: '#312F2F',
     },
     picker: {
         borderRadius: 10,
