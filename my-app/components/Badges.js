@@ -21,10 +21,6 @@ function Badges() {
 
     return (
         <View style={styles.container}>
-            <Pressable style={styles.menuButton} onPress={() => navigation.toggleDrawer()}>
-                <Text style={styles.menuIcon}>☰</Text>
-            </Pressable>
-
             <ScrollView style={styles.scrollView}>
                 {badges.map((badge) => (
                     <View key={badge.id} style={styles.badgeContainer}>
@@ -70,16 +66,6 @@ const styles = StyleSheet.create({
         fontSize: 14,
         textAlign: 'center',
         marginTop: 2,
-    },
-    menuButton: {
-        position: 'absolute',
-        top: 40,
-        left: 20,
-        zIndex: 1,
-    },
-    menuIcon: {
-        fontSize: 30,
-        color: '#312F2F',
     },
 });
 
