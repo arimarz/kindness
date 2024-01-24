@@ -1,0 +1,49 @@
+{
+    "user": [
+        {"2023-12": [
+            {"2023-12-25": {
+                "act_category": "Self Acts",
+                "act": "Write down three things you're grateful for today."
+            }}
+        ]},
+        {"2024-01": [
+            {"2024-01-01": {
+                "act_category": "Verbal Acts",
+                "act": "Compliment a stranger on something you genuinely like about them."
+            }},
+            {"2024-01-02": {
+                "act_category": "Physical Acts",
+                "act": "Hold the door open for someone."
+            }},
+            {"2024-01-07": {
+                "act_category": "Digital Acts",
+                "act": "Send an e-card to a friend just to brighten their day."
+            }},
+            {"2024-01-10": {
+                "act_category": "Monetary Acts",
+                "act": "Donate a small amount to a charity of your choice."
+            }},
+            {"2024-01-11": {
+                "act_category": "Educational Acts",
+                "act": "Teach someone a new skill you're good at."
+            }},
+            {"2024-01-18": {
+                "act_category": "Environmental Acts",
+                "act": "Plant a tree or some flowers in a communal area."
+            }},
+            {"2024-01-20": {
+                "act_category": "Workplace Acts",
+                "act": "Bring in snacks or coffee for your colleagues."
+            }},
+            {"2024-01-23": {
+                "act_category": "Neighborly_Acts",
+                "act": "Organize a neighborhood clean-up day."
+            }},
+            {"2024-01-24": {
+                "act_category": "Self Acts",
+                "act": "Take a day off for self-care."
+            }}
+        ]
+        }
+    ]
+}
